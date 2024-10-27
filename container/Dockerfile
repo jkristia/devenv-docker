@@ -8,11 +8,12 @@ RUN apt update
 RUN apt install -y sudo protobuf-compiler golang \
 	python3.11 python3.11-dev python3.11-venv nodejs npm
 RUN npm install -g typescript 
-RUN export PATH=$PATH:$(go env GOPATH)/bin:/project/my-module
+RUN go install github.com/chrusty/protoc-gen-jsonschema/cmd/protoc-gen-jsonschema@latest
+RUN export PATH=$PATH:$(go env GOPATH)/bin:
 
-RUN mkdir my-module && \
-	cd my-module && \
-	go mod init my-module
+# RUN mkdir my-module && \
+# 	cd my-module && \
+# 	go mod init my-module
 	# go install github.com/solo-io/protoc-gen-openapi/cmd/protoc-gen-openapi@latest
 
 # RUN go get -u github.com/solo-io/protoc-gen-openapi/cmd/protoc-gen-openapi

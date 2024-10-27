@@ -12,6 +12,11 @@ build-run-dev: build-dev-image ## Build and run dev image
 PHONY: api
 api: ## build proto api
 	protoc \
-		--proto_path=proto \
+		--proto_path=./proto \
 		--python_out=. \
+		test.proto
+	mkdir -p ./proto/json_out
+	protoc \
+		--proto_path=./proto \
+		--jsonschema_out=./proto/json_out \
 		test.proto
