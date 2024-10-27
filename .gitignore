@@ -1,3 +1,5 @@
 .npm
 .bash_history
 .lesshst
+.home/go
+.home/.cache

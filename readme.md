@@ -18,3 +18,11 @@ $ make
 make build-dev-image        - Build dev environment Docker image
 make build-run-dev          - Build and run dev image
 ```
+
+
+Install npm on ubuntu https://tecadmin.net/how-to-install-nvm-on-ubuntu-20-04/
+```
+sudo apt install curl 
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+source ~/.bashrc
+```
