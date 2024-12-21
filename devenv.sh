@@ -11,8 +11,8 @@ exec docker run --rm -it \
 	-v ${PWD}:/project \
 	-v /etc/passwd:/etc/passwd:ro \
 	-v /etc/group:/etc/group:ro \
-    -v /var/run/docker.sock:/var/run/docker.sock \
+	-v /var/run/docker.sock:/var/run/docker.sock \
 	-w /project \
-    --entrypoint /bin/bash\
+	--entrypoint /bin/bash\
 	"${DOCKER_IMAGE}" \
 	-c 'export PATH=$PATH:/project/.home/.local/bin; bash'

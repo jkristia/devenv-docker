@@ -1,5 +1,6 @@
 .npm
 .venv
+.home
 .bash_history
 .lesshst
 .home/go
